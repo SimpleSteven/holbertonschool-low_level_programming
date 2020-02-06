@@ -11,23 +11,26 @@
 int main(void)
 {
 int i;
-int a;
+int a = 0;
+int b = 0;
+int c = 10;
 for (i = 0; i < 10; i++)
 {
-for (a = 0; a < 10; a++)
+for (a = a; a < 10; a++)
 {
 if (i != a)
 {
 putchar(i + '0');
 putchar(a + '0');
-if (i != 9 || a != 9)
+if (i != 8 || a != 9)
 {
 putchar(',');
 putchar(' ');
 }
 }
 }
-a = 0;
+b++;
+a = b;
 }
 putchar('\n');
 return (0);
