@@ -12,8 +12,7 @@ int main(void)
 {
 int i;
 int a = 0;
-int b = 0;
-int c = 10;
+int b;
 for (i = 0; i < 10; i++)
 {
 for (a = a; a < 10; a++)
