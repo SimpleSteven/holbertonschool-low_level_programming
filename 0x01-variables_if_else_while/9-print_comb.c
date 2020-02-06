@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdio.h>
+#include <time.h>
 
 /**
  * main - Entry point
@@ -11,13 +13,12 @@ int main(void)
 int i;
 for (i = 0; i < 10; i++)
 {
-if (i == 9)
+putchar(i + '0');
+
+if (i != 9)
 {
-putchar(i + '$');
-}
-else
-{
-putchar(i + ',');
+putchar(',');
+putchar(' ');
 }
 }
 putchar('\n');
