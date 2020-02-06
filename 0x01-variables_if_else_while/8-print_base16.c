@@ -13,10 +13,9 @@ int main(void)
 int a;
 for (a = 0; a < 16; a++)
 {
-long int decn = a, rmd, q, dn = 0, m, l;
+long int q = a, rmd, dn = 0, m, l;
 int i = 1, j, tmp;
 char s;
-q = decn;
 for (l = q; l > 0; l = l / 16)
 {
 tmp = l % 16;
