@@ -1,5 +1,6 @@
-  #include <stdio.h>
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
  * main - Entry point
@@ -9,34 +10,27 @@
 
 int main(void)
 {
-	int i, j, k;
-
-	i = '0';
-	while (i <= '7')
-	{
-		j = '0';
-		while (j <= '8')
-		{
-			k = '0';
-			while (k <= '9')
-			{
-				if (i < j && j < k)
-				{
-					putchar(i);
-					putchar(j);
-					putchar(k);
-					if (i != '7' || j != '8' || k != '9')
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
-				k++;
-			}
-			j++;
-		}
-		i++;
-	}
-	putchar('\n');
-	return (0);
+int a;
+int b;
+int c;
+for (a = 0; a < 10; a++)
+{
+for (b = a + 1; b < 10; b++)
+{
+for (c = b + 1; c < 10; c++)
+if (a != b && b != c)
+{
+putchar(a + '0');
+putchar(b + '0');
+putchar(c + '0');
+if (a < 7 || b < 8 || c < 9)
+{
+putchar(',');
+putchar(' ');
+}
+}
+}
+}
+putchar('\n');
+return (0);
 }
