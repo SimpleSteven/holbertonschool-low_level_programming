@@ -1,34 +1,44 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 /**
  * main - Entry point
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int a;
-	int b;
-
-	for (a = 0; a < 100; a++)
-	{
-		for (b = 0; b < 100; b++)
-		{
-			if ((a == 0 && b != 0) || (b > a))
-			{
-				putchar(a / 10 + '0');
-				putchar(a % 10 + '0');
-				putchar(' ');
-				putchar(b / 10 + '0');
-				putchar(b % 10 + '0');
-
-				if (a < 98)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-		}
-	}
-	putchar(10);
-	return (0);
+int a;
+int b;
+int c;
+int d;
+for (a = 0; a < 10; a++)
+{
+for (b = 0; b < 10; b++)
+{
+for (c = 0; c < 10; c++)
+{
+for (d = 0; d < 10; d++)
+{
+if (a < c || a == b && c < d)
+{
+putchar(a + '0');
+putchar(b + '0');
+putchar(' ');
+putchar(c + '0');
+putchar(d + '0');
+if (a < 9 || b < 8 || c < 9 || d < 9)
+{
+putchar(',');
+putchar(' ');
+}
+}
+}
+}
+}
+}
+putchar('\n');
+return (0);
 }
