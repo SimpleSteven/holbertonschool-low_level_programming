@@ -1,10 +1,12 @@
   #include <stdio.h>
 
+
 /**
- *main - prints unic combinations
+ * main - Entry point
  *
- *Return: 0
-*/
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
 	int i, j, k;
