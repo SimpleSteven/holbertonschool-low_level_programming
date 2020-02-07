@@ -1,9 +1,11 @@
 #include <stdio.h>
+
 /**
- * main - Prints 2 numbers convinations
- * Description: For loop that prints the numbers from 00 00 to 98 99
- * Return: 0
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 int a;
