@@ -1,31 +1,41 @@
+  
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
- * main - Entry point
+ *main - prints unic combinations
  *
- * Return: Always 0 (Success)
- */
+ *Return: 0
+*/
 int main(void)
 {
-	int m;
-	int n = '1';
-	int o = '2';
+	int i, j, k;
 
-	for (m = '0' ; m <= '9' ; m++)
-		for (n = m + 1 ; n <= '9' ; n++)
-			for (o = n + 1 ; o <= '9' ; o++)
+	i = '0';
+	while (i <= '7')
+	{
+		j = '0';
+		while (j <= '8')
+		{
+			k = '0';
+			while (k <= '9')
+			{
+				if (i < j && j < k)
 				{
-				putchar(m);
-				putchar(n);
-				putchar(o);
-				if ((m == '7') && (n == '8') && (o == '9'))
-					continue;
-				putchar(',');
-				putchar(' ');
+					putchar(i);
+					putchar(j);
+					putchar(k);
+					if (i != '7' || j != '8' || k != '9')
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
+				k++;
+			}
+			j++;
+		}
+		i++;
+	}
 	putchar('\n');
 	return (0);
-}
 }
