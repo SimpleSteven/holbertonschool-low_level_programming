@@ -10,19 +10,24 @@
 
 int main(void)
 {
-	int a, b, c;
-	for (a = 0; a < 8; a++)
+	int a;
+	int b;
+	int c;
+
+	for (a = '0'; a <= '7'; a++)
 	{
-		for (b = 0; b < 9; b++)
+		for (b = a + 1; b <= '8'; b++)
 		{
-			for (c = 0; c < 10; c++)
+			for (c = b + 1; c <= '9'; c++)
 			{
-				if (a != b && a != c && b != c)
-				{ 
-					putchar(a + '0');
-					putchar(b + '0');
-					putchar(c + '0');
-					if (a != 7 || b != 8 || c != 9)
+				if (a != b && a != b &&
+				    b != c)
+				{
+					putchar(a);
+					putchar(b);
+					putchar(c);
+					if (a != '7' || b != '8' ||
+					    c != '9')
 					{
 						putchar(',');
 						putchar(' ');
