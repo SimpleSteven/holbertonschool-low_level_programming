@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * int _abs - change to positive if  int is negative.
+ * _abs - change to positive if  int is negative.
  * @n: The int to print
  * Return: show the positive value.
  */
