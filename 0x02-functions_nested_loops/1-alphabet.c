@@ -1,14 +1,19 @@
+#include <unistd.h>
 #include "holberton.h"
 
 /**
- * main - Entry point
+ * print_alphabet - writes the character c to stdout
+ * @c: The character to print
  *
- * Return: Always 0 (Success)
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
 
-int main(void)
+void print_alphabet(void)
 {
-print_alphabet();
-return (0);
+char a;
+for (a = 'a'; a <= 'z'; ++a)
+_putchar(a);
+_putchar('\n');
 }
 
