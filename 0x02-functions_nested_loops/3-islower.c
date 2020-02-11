@@ -2,7 +2,7 @@
 
 /**
  * _islower - check lowercaser.
- *
+ * @n: The int to print
  * Return: 1 if n is lowercase.
  */
 
