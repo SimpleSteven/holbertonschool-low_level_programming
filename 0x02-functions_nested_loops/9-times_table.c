@@ -16,19 +16,21 @@ if (c >= 10)
 {
 d = c / 10;
 e = c % 10;
+_putchar(',');
+_putchar(' ');
 _putchar(d + '0');
 _putchar(e + '0');
 }
-else
+else if (b == 0)
 {
 _putchar(c + '0');
 }
-if (b != 9)
+else
 {
 _putchar(',');
 _putchar(' ');
-if (c < 10)
 _putchar(' ');
+_putchar(c + '0');
 }
 }
 _putchar('\n');
