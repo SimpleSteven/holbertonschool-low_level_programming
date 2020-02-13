@@ -1,4 +1,3 @@
-#include <unistd.h>
 #include "holberton.h"
 
 /**
@@ -8,7 +7,7 @@
 void more_numbers(void)
 {
 	int a, b, c;
-	
+
 	for (a = 0; a <= 9; a++)
 	{
 		for (b = 0; b <= 2; b++)
