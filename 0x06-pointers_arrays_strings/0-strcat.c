@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
- * *_strcat - check the code for Holberton School students.
+ * _strcat - check the code for Holberton School students.
  * @dest: the char
  * @src: the other char
+ * Return: the char concatenated
  */
 
 char *_strcat(char *dest, char *src)
@@ -22,5 +23,5 @@ char *_strcat(char *dest, char *src)
 		a++;
 	}
 
-	return dest;
+	return (dest);
 }
