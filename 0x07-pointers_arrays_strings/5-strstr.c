@@ -19,6 +19,8 @@ char *_strstr(char *haystack, char *needle)
 		}
 		else
 		{
+			if (j > 0)
+				needle = needle - 1;
 			needle = needle - j;
 			j = 0;
 		}
