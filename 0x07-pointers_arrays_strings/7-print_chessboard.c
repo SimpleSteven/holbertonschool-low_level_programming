@@ -2,34 +2,19 @@
 
 /**
  * print_chessboard - check the code for Holberton School students.
- * @haystack: the char
- * @needle: the other char
- * Return: the char concatenated
+ * @a: the char
  */
 
-char print_chessboard(char *haystack, char *needle)
+void print_chessboard(char (*a)[8])
 {
-	int j = 0;
+	int i, j;
 
-	if (!*needle)
-		return (haystack);
-	for (; *haystack; haystack++)
+	for (i = 0; i < 8; i++)
 	{
-		if (*haystack == *needle)
+		for (j = 0; j < 8; j++)
 		{
-			needle++, j++;
+			_putchar(a[i][j]);	
 		}
-		else
-		{
-			needle = needle - j;
-			j = 0;
-		}
-		if (!*needle)
-		{
-			haystack = haystack - j + 1;
-			return (haystack);
-		}
+		_putchar('\n');
 	}
-
-	return (0);
 }
