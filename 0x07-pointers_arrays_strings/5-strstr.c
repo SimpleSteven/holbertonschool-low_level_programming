@@ -11,7 +11,9 @@ char *_strstr(char *haystack, char *needle)
 {
 	int j = 0;
 
-	for (; *haystack && *needle; haystack++)
+	if (!*needle)
+		return (haystack);
+	for (; *haystack; haystack++)
 	{
 		if (*haystack == *needle)
 		{
@@ -19,8 +21,6 @@ char *_strstr(char *haystack, char *needle)
 		}
 		else
 		{
-			if (j > 0)
-				needle = needle - 1;
 			needle = needle - j;
 			j = 0;
 		}
