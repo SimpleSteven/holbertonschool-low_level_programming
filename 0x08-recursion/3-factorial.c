@@ -1,19 +1,21 @@
 #include "holberton.h"
 
 /**
- * _memset - check the code for Holberton School students.
- * @s: the char
- * @b: the other char
- * @n: the int
+ * factorial - check the code for Holberton School students.
+ * @n: the char
  * Return: the char concatenated
  */
 
-char *_memset(char *s, char b, unsigned int n)
+int factorial(int n)
 {
-	unsigned int i;
-
-	for (i = 0; i < n; i++)
-		s[i] = b;
-
-	return (s);
+	if (n < 0)
+		return (-1);
+	else if (n < 2)
+	{
+		return (n);
+	}
+	else
+	{
+		return (n = n * factorial(n - 1));
+	}
 }
