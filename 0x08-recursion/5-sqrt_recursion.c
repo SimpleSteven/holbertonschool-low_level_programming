@@ -3,7 +3,7 @@
 /**
  * _sqrt_recursion - check the code for Holberton School students.
  * @n: the int
-  *@cnt: the counter
+ * @cnt: the other int
  * Return: the char concatenated
  */
 
