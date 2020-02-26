@@ -3,6 +3,7 @@
 /**
  * is_prime_number - check the code for Holberton School students.
  * @n: the int
+ * @cnt: the other int
  * Return: the char concatenated
  */
 
