@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-/*
- * main - the  main function
+/**
+ * main - the function
  * @argc:  the int
  * @argv: the char
  * Return: h
