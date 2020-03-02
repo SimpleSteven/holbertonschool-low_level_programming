@@ -27,10 +27,12 @@ int main(int argc, char *argv[])
 	{
 		for (i = 0; i < 5; i++)
 		{
-			if (value > cents[i])
+			if (value == 0)
+				break;
+			if (value >= cents[i])
 			{
 				j += value / cents[i];
-				value %= cents[i];
+				value = value % cents[i];
 			}
 		}
 	}
