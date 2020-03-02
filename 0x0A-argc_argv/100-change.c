@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j = 0, value = atoi(argv[1]);
+	int i, j = 0, value;
 	int cents[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
@@ -18,13 +18,14 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	else if (value < 0)
+	else if (atoi(argv[1]) < 0)
 	{
 		printf("0\n");
 		return (0);
 	}
 	else
 	{
+		value = atoi(argv[1]);
 		for (i = 0; i < 5; i++)
 		{
 			if (value == 0)
