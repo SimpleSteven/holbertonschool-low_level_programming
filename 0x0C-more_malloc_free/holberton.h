@@ -25,4 +25,6 @@ void print_square(int size);
 
 void print_triangle(int size);
 
+void *malloc_checked(unsigned int b);
+
 #endif /* HOLBERTON_H */
