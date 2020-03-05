@@ -15,16 +15,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *a;
 	int count = 0, count2 = 0, con = 0;
 
-	while (con != 2)
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	for (; s1[count]; count++)
 	{
-		if (s1[count] != '\0' && con == 0)
-			count++;
-		else
-			con = 1;
-		if (con == 1 && s2[count2] != '\0' && count2 < n)
-			count2++;
-		else if (con == 1)
-			con = 2;
+	}
+	for (; s2[count2]; count2++)
+	{
 	}
 	a = malloc(count + count2 + 1);
 	if (a == NULL)
