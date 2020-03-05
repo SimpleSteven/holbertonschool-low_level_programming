@@ -1,0 +1,97 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+  * strtow - the function
+  * @str: the char
+  * Return: the char
+  */
+
+
+char **strtow(char *str)
+{
+	int *a;
+	int count = wordcount, lastword = 0;
+
+	if (str == NULL || str == "")
+		return (NULL);
+	while (str[count] != '\0')
+	{
+		if (str[count] != " ")
+		{
+			count++;
+			wordcount = 1;
+			lastword = 1;
+		}
+		else if (str[count] == " " && wordcount == 1)
+		{
+			wordcount = 0;
+			count++;
+			lastword = 0;
+		}
+		else if (str[count] == " " && wordcount == 0)
+		{
+			lastword = 0;
+			count++;
+		}
+	}
+	if (lastword == 1)
+		count++;
+	else
+		count--;
+	a = malloc(count);
+	if (a == NULL)
+		return (NULL);
+	return (adtoar(char *str, char *a));
+}
+
+/**
+  * adtoar - the other function
+  * @str: the char
+  * @a: the array
+  * Return: the char
+  */
+
+char **adtoar(char *str, char *a)
+{
+	int arcount, count, wordcount, lastword = 0;
+
+	while (str[count] != '\0')
+	{
+		if (str[count] != " ")
+		{
+			a[arcount] = str[count];
+			count++;
+			arcount++;
+			lastword = 1;
+		}
+		else if (str[count] == " " && wordcount == 1)
+		{
+			arcount++;
+			a[arcount] = '\n';
+			wordcount = 0;
+			arcount++;
+			count++;
+			lastword = 2;
+		}
+		else if (str[count] == " " && wordcount == 0)
+		{
+			count++;
+			lastword = 0;
+		}
+	}
+	if (lastword == 1)
+	{
+		a[arcount] = '\n';
+		arcount++;
+		a[arcount] = '\0';
+	}
+	else if (lastword == 2)
+		a[arcount] = '\0';
+	else if (lastword == 1)
+	{
+		arcount++;
+		a[arcount] = '\0';
+	}
+	return (a);
+}
