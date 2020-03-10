@@ -14,7 +14,7 @@ char *_strdup(char *str);
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	struct dog *new_dog;
+	dog_t *new_dog;
 	char *s1;
 	char *s2;
 
@@ -27,9 +27,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 	s1 = _strdup(new_dog->name);
 	s2 = _strdup(new_dog->owner);
 	if (s1 == NULL && s2 != NULL)
+	{
 		free(s2);
+		return (NULL);
+	}
 	if (s2 == NULL && s1 != NULL)
+	{
 		free(s1);
+		return (NULL);
+	}
+	if (s2 == NULL && s1 == NULL)
+		return (NULL);
 	return (new_dog);
 }
 
