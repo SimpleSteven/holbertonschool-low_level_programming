@@ -15,19 +15,19 @@ int main(int argc, char *argv[])
 
 	if (argc != 4)
 	{
-		printf("ERROR\n");
+		printf("Error\n");
 		exit(98);
 	}
 	else if ((argv[2][0] != '+' && argv[2][0] != '*' && argv[2][0] != '-'
 		&& argv[2][0] != '/' && argv[2][0] != '%') || argv[2][1] != '\0')
 	{
-		printf("ERROR\n");
+		printf("Error\n");
 		exit(99);
 	}
 	else if ((argv[2][0] == '/' ||
 		argv[2][0] == '%') && (atoi(argv[1]) == 0 || atoi(argv[3]) == 0))
 	{
-		printf("ERROR\n");
+		printf("Error\n");
 		exit(100);
 	}
 	a = atoi(argv[1]);
