@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	temp = (unsigned char *)&main;
 	for (count = 0; count < atoi(argv[1]) - 1; count++)
 	{
-		printf("%02hhX ", temp[count]);
+		printf("%02hhx ", temp[count]);
 	}
 	printf("%02hhx\n", temp[count]);
 	return (0);
