@@ -25,8 +25,6 @@ int main(int argc, char *argv[])
 	}
 	for (i = 0; i < argv[1][i] != '\0'; i++)
 	{
-		if (argv[1][i] > 47 && argv[1][i] < 58)
-			continue;
 		printf("Error\n");
 		exit(1);
 	}
