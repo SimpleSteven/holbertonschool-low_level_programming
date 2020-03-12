@@ -25,6 +25,8 @@ int main(int argc, char *argv[])
 	}
 	for (i = 0; i < argv[1][i] != '\0'; i++)
 	{
+		if (argv[1][i] > 47 && argv[1][i] < 58)
+			continue;
 		printf("Error\n");
 		exit(1);
 	}
@@ -33,6 +35,6 @@ int main(int argc, char *argv[])
 	{
 		printf("%02hhX ", temp[count]);
 	}
-	printf("%02hhX\n", temp[count]);
+	printf("%02hhx\n", temp[count]);
 	return (0);
 }
