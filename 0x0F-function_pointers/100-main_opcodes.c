@@ -25,7 +25,9 @@ int main(int argc, char *argv[])
 	}
 	temp = (unsigned char *)&main;
 	for (count = 0; count < atoi(argv[1]) - 1; count++)
+	{
 		printf("%x ", temp[count]);
+	}
 	printf("%x\n", temp[count]);
 
 	return (0);
