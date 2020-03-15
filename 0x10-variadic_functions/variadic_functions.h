@@ -27,4 +27,6 @@ void _float(va_list args);
 
 void _string(va_list args);
 
+int _putchar(char n);
+
 #endif
