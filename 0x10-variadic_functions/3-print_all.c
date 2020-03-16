@@ -22,7 +22,7 @@ void print_all(const char * const format, ...)
 	va_list args;
 
 	va_start(args, format);
-	while (format[count] != '\0')
+	while (format[count] && format)
 	{
 		count2 = 0;
 		while (count2 < 4)
@@ -79,10 +79,9 @@ void _float(va_list args)
 
 void _string(va_list args)
 {
-	char *a;
+	char *a = va_arg(args, char *);
 
-	a = va_arg(args, char *);
 	if (a == NULL)
-		printf("(nil)");
+		a = "(nil)";
 	printf("%s", a);
 }
