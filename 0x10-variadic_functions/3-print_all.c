@@ -23,7 +23,8 @@ void print_all(const char * const format, ...)
 
 	va_start(args, format);
 	while (format[count] != '\0')
-	{	
+	{
+		count2 = 0;
 		while (count2 < 4)
 		{
 			if (datas[count2].type == format[count])
@@ -79,7 +80,7 @@ void _float(va_list args)
 void _string(va_list args)
 {
 	char *a;
-	
+
 	a = va_arg(args, char *);
 	if (a == NULL)
 		printf("(nil)");
