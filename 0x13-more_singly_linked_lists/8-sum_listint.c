@@ -1,9 +1,8 @@
 #include "lists.h"
 
 /**
-  * get_nodeint_at_index - delete a node at the given position
+  * sum_listint - sum all the values of the nodes of a linked list
   * @head: the first node of the linked list
-  * @index: the given position
   * Return: the searched node
   **/
 
