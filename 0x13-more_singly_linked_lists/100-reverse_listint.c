@@ -14,11 +14,11 @@ listint_t *reverse_listint(listint_t **head)
 	if (!*head)
 		return (NULL);
 	if (current_node->next)
-		prev_node->next = NULL;
+		current_node = current_node->next;
 	else
 		return (*head);
 	_rev(head, current_node, prev_node);
-	current_node = current_node->next;
+	prev_node->next = NULL;
 	return (*head);
 }
 
