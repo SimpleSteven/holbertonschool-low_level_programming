@@ -27,6 +27,7 @@ listint_t *reverse_listint(listint_t **head)
   * @head: the head of the linked list
   * @c_node: the current node
   * @p_node: thw previous node
+  * Return: something, doesn't care really
   **/
 
 int _rev(listint_t **head, listint_t *c_node, listint_t *p_node)
