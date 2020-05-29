@@ -51,4 +51,6 @@ listint_t *find_listint_loop(listint_t *head);
 
 int _rev(listint_t **head, listint_t *c_node, listint_t *p_node);
 
+size_t loop(const listint_t *h, const listint_t *s_node, const listint_t *d_node);
+
 #endif
