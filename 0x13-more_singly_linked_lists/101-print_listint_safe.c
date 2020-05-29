@@ -40,7 +40,8 @@ size_t print_listint_safe(const listint_t *head)
   * Return: the numbers of prints
   **/
 
-size_t loop(const listint_t *h, const listint_t *s_node, const listint_t *d_node)
+size_t loop(const listint_t *h, const listint_t *s_node,
+const listint_t *d_node)
 {
 	size_t counter = 0;
 
