@@ -5,7 +5,7 @@
  * @ht: the hash table
  * @key: the key of the element to add or update
  * @value: the value of the element
- * Return: 1 if success, 0 otherwise 
+ * Return: 1 if success, 0 otherwise
  */
 
 
@@ -13,7 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	if (!key)
 		return (0);
-	unsigned int index = key_index((const unsigned char *)key, ht->size);
+	unsigned long int index = key_index((const unsigned char *)key, ht->size);
 	hash_node_t *new_node = malloc(sizeof(hash_node_t));
 
 	if (new_node == NULL)
