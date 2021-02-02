@@ -5,7 +5,7 @@
  * @ht: the hash table
  * @key: the key of the element to add or update
  * @value: the value of the element
- * Return: 1 if success, 0 otherwise
+ * Return: 1 if success, 0 otherwise 
  */
 
 
